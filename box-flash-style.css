@@ -1,0 +1,63 @@
+body {
+    background:rgb(200,200,200);
+    font-family:roboto;
+    letter-spacing:3px;
+    font-weight:bold;
+    font-size:50px;
+}
+#root {
+    max-width:1200px; 
+    margin:0 auto;
+}
+.animated-box {
+    position:relative;
+    margin:50px auto;
+    overflow:hidden;
+    width:200px; 
+    height:200px; 
+    background: rgba(255,255,255,255);
+    box-shadow: 10px -10px 20px rgba(0,0,0,.1),
+    1px 1px 5px rgba(0,0,0,.6),
+    -10px 10px 40px rgba(0,0,0,.1);
+}
+
+@keyframes box-flash {
+    from {left:-450px;}
+    to {left:450px}
+  }
+
+.animated-box-flash {
+    position: absolute;
+    width:200px;
+    left:-450px;
+    height:100%;
+    background-image: linear-gradient(
+        -90deg, 
+        rgba(250, 231, 60, .4),
+        rgba(250, 231, 60, 0.7), 
+        rgba(250, 231, 60, 0)
+        );
+
+    -ms-transform: skewX(-30deg); /* IE 9 */
+    -webkit-transform: skewX(-30deg); /* Safari */
+    transform: skewX(-30deg);
+
+    animation-name:box-flash;
+    animation-duration:2s;
+    animation-delay:.5s;
+    animation-iteration-count:infinite;
+
+}
+
+
+
+.shadow-text {
+    text-align:center;
+    color:rgba(255,255,255,1);
+    text-shadow: 10px -10px 20px rgba(0,0,0,.1),
+    1px 1px 6px rgba(0,0,0,.8),
+    -10px 10px 40px rgba(0,0,0,.1)
+    ;
+    word-wrap:break-word;
+
+}
